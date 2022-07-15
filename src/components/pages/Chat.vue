@@ -22,11 +22,11 @@ export default defineComponent({
 
     data.user = getAuth().currentUser;
     data.displayName = data.user.displayName ?? '自分さん';
-
     const refMessage = ref(getDatabase(), 'chat');
+
     onValue(refMessage, (snapshot) => {
-    const data = snapshot.val();
-    updateChat(data);
+      const data = snapshot.val();
+      updateChat(data);
     });
 
     const updateChat = (snap) => {
@@ -48,7 +48,10 @@ export default defineComponent({
     };
 
     const updateDisplayName = (name) => {
-    console.log(name)
+      updateProfile(data.user, {
+      displayName: name
+      });
+      data.displayName = name
     }
       return {
       data,
