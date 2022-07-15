@@ -2,7 +2,6 @@
 import { defineComponent, reactive } from 'vue'
 import View from '../chat/View.vue'
 import Send from '../chat/Send.vue'
-import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { getDatabase, ref, push, onValue } from "firebase/database";
 import DisplayName from '../chat/DisplayName.vue'
 import { getAuth, onAuthStateChanged, updateProfile } from "firebase/auth";
