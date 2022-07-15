@@ -5,12 +5,14 @@ import Send from '../chat/Send.vue'
 import { getDatabase, ref, push, onValue } from "firebase/database";
 import DisplayName from '../chat/DisplayName.vue'
 import { getAuth, onAuthStateChanged, updateProfile } from "firebase/auth";
+import Header from '../header/Header.vue'
 
 export default defineComponent({
   components: {
     View,
     Send,
-    DisplayName
+    DisplayName,
+    Header
   },
   setup() {
     const data = reactive({
@@ -74,6 +76,7 @@ export default defineComponent({
 </script>
 
 <template>
+  <Header />
   <div class="container">
    <DisplayName v-model="data.displayName" @update="updateDisplayName" />
    <View :data="data" />
