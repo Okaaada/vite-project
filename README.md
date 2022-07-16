@@ -1,7 +1,21 @@
-# Vue 3 + Vite
+アプリケーション名
+「vite-project」
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+アプリケーション概要
+メッセージ送信のアプリケーションです。
 
-## Recommended IDE Setup
+URL
+https://frontend-project-62ec7.web.app
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+テスト用アカウント
+メールアドレス： aaa3@aaa.com
+パスワード : aaa000
+
+利用方法
+アカウント未登録者は「signup」ボタンからユーザー作成後に、登録者は「Login」ボタンからログイン後にチャットページにてチャットを行うことができます。
+
+工夫したところ
+課題にはなかったですが、
+signupの画面への移動のルートがなく不便に感じたので、勝手に追加しました。
+
+
