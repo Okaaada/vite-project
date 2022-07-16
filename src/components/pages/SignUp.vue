@@ -2,8 +2,8 @@
 import Email from '../input/Email.vue'
 import Password from '../input/Password.vue'
 import { reactive } from '@vue/reactivity'
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import { useRouter } from "vue-router"
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth"
+import { useRouter } from "vue-router";
 
 const data = reactive({
   email: "",

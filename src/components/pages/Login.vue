@@ -17,10 +17,15 @@ const login = () => {
       router.push('/');
     })
     .catch((err) => {
-      console.log(err)
       alert("正しいログイン情報を入力してください")
     });
 }
+
+const SignUp = () => {
+      router.push('/signup');
+};
+
+
 </script>
 
 <template>
@@ -37,6 +42,7 @@ const login = () => {
               <Password id="password" title="password" v-model="data.password" />
 
               <button class="btn btn-outline-primary btn-lg btn-block" type="submit" @click="login">Login</button>
+              <button class="btn btn-outline-primary btn-lg btn-block" type="submit" @click="SignUp">SignUp</button>
             </div>
           </div>
         </div>
