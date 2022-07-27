@@ -2,16 +2,19 @@
 import { defineComponent, reactive } from 'vue'
 import View from '../chat/View.vue'
 import Send from '../chat/Send.vue'
-import { getDatabase, ref, push, onValue } from "firebase/database";
 import DisplayName from '../chat/DisplayName.vue'
 import Header from '../header/Header.vue'
+import Footer from '../footer/Footer.vue'
+import { getDatabase, ref, push, onValue } from "firebase/database";
+
 
 export default defineComponent({
   components: {
     View,
+    Header,
     Send,
     DisplayName,
-    Header
+    Footer
   },
   setup() {
     const data = reactive({
@@ -21,14 +24,6 @@ export default defineComponent({
       displayName: ''
     });
 
-    data.user = getAuth().currentUser;
-    data.displayName = data.user.displayName ?? '自分さん';
-    const refMessage = ref(getDatabase(), 'chat');
-
-    onValue(refMessage, (snapshot) => {
-      const data = snapshot.val();
-      updateChat(data);
-    });
 
     const updateChat = (snap) => {
       data.chat = [];
@@ -61,26 +56,17 @@ export default defineComponent({
       }
     },
 
-    beforeRouteEnter: (to, from, next) => {
-    const auth = getAuth();
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        next();
-      } else {
-        next('/login');
-      }
-    });
-  }
 });
 </script>
 
 <template>
   <Header />
   <div class="container">
-   <DisplayName v-model="data.displayName" @update="updateDisplayName" />
-   <View :data="data" />
-   <Send @sendMessage="pushMessage" />
+    <View :data="data" />
+    <DisplayName v-model="data.displayName" @update="updateDisplayName" />
+    <Send @sendMessage="pushMessage" />
   </div>
+  <Footer />
 </template>
 
 <style scoped>

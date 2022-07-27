@@ -9,13 +9,12 @@
     signOut(auth);
     router.push('/login');
   }
+
   </script>
 
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid bg-success text-white ">
-    <router-link class="navbar-brand text-white" to="/login" >大人のための札幌バレーボール部掲示板</router-link>
-    <div>何かご質問があればどうぞ！</div>
+    <router-link class="navbar-brand text-white" to="/login" >大人のための札幌バレーボール部</router-link>
   </div>
-</nav>
+   <button @click="locate" class="btn btn-primary">line 追加</button>
 </template>

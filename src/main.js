@@ -13,12 +13,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyB1E4pS6M6PW7liOZlpJmGV5ApzclH7p4Q",
-  authDomain: "vite-project-2f372.firebaseapp.com",
-  projectId: "vite-project-2f372",
-  storageBucket: "vite-project-2f372.appspot.com",
-  messagingSenderId: "264194478371",
-  appId: "1:264194478371:web:df4e73cb70b13d52883c96"
+  apiKey: "AIzaSyAFEZh5wHW17xx0I8BhQwlMPoYX9r7SRRA",
+  authDomain: "otonano-sapporovolley.firebaseapp.com",
+  projectId: "otonano-sapporovolley",
+  storageBucket: "otonano-sapporovolley.appspot.com",
+  messagingSenderId: "682719516917",
+  appId: "1:682719516917:web:db1571bcac198caad4cdbc"
 };
 
 // Initialize Firebase
